@@ -1,0 +1,38 @@
+{
+    "name": "huid/phpdeps",
+    "description": "for php packege, show depend version",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhanghuide",
+            "email": "iamhuide@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Huid\\PhpcDep\\": "src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Huid\\PhpcDep\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "symfony/console": "^5.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "laravel/laravel": "v8.5.19"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.2"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1 --rules=@PSR2"
+    }
+}
